@@ -1,4 +1,17 @@
 #include <stdio.h>
+#include <malloc.h>
+
+void MultipleMissing(int* arr);
+int Max(int* arr, int taille);
+void MultipleMissingOpti(int* arr, int taille);
+
+int main()
+{
+    int arr[] = { 3,7,4,9,12,6,1,11,2,10 };
+    int taille = sizeof(arr) / sizeof(arr[0]);
+    MultipleMissingOpti(arr, taille);
+    return 0;
+}
 
 void MultipleMissing(int* arr)
 {
@@ -17,22 +30,27 @@ void MultipleMissing(int* arr)
     }
 }
 
-void MultipleMissingOpti(int* arr)
+int Max(int* arr, int taille)
 {
-    int i;
-    int hashmap[13] = {0};
-    for (i = 0; i < 10; i++)
-        hashmap[arr[i]]++;
-    for (i = 1; i <= 13; i++)
+    int max = arr[0];
+    for (int i = 0; i < taille; i++)
     {
-        if (hashmap[i] == 0)
-            printf("element is missing --> %d\n", i);
+        if (arr[i] > max)
+            max = arr[i];
     }
+    return max;
 }
 
-int main()
+void MultipleMissingOpti(int* arr, int taille)
 {
-    int arr[] = { 3,7,4,9,12,6,1,11,2,10 };
-    MultipleMissingOpti(arr);
-    return 0;
+    int i;
+    int max = Max(arr, taille);
+    static int* hashmap = (int*)malloc(max * sizeof(int));
+    for (i = 0; i < taille; i++)
+        hashmap[arr[i]] = 1;
+    for (i = 1; i <= max; i++)
+    {
+        if (hashmap[i] != 1)
+            printf("element is missing --> %d\n", i);
+    }
 }
