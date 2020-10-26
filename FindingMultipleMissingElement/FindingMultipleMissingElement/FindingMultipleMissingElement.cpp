@@ -45,7 +45,7 @@ void MultipleMissingOpti(int* arr, int taille)
 {
     int i;
     int max = Max(arr, taille);
-    static int* hashmap = (int*)malloc(max * sizeof(int));
+    static int* hashmap = (int*)malloc((max+1) * sizeof(int));
     for (i = 0; i < taille; i++)
         hashmap[arr[i]] = 1;
     for (i = 1; i <= max; i++)

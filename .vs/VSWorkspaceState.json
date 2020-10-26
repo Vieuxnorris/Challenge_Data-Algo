@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FindingMultipleMissingElement",
+    "\\FindingSingleMissingElement"
   ],
+  "SelectedNode": "\\FindingMultipleMissingElement\\FindingMultipleMissingElement.sln",
   "PreviewInSolutionExplorer": false
 }
