@@ -7,3 +7,4 @@ Student Challenge for Mastering Data Structure &amp; Algorithms using C and C++
 - FindingDuplicatesUnsorted
 - FindingSingleMissingElement
 - FindingMultipleMissingElement
+- MinMaxOneScan
