@@ -5,6 +5,7 @@ Student Challenge for Mastering Data Structure &amp; Algorithms using C and C++
 - FindingAPairOfSortedElement
 - FindingDuplicateElements
 - FindingDuplicatesUnsorted
+- FindingMiddleElementOfALinkedList
 - FindingSingleMissingElement
 - FindingMultipleMissingElement
 - MinMaxOneScan
